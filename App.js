@@ -20,7 +20,7 @@ export default function App() {
     setGoals((prevGoals) => {
       return [
         ...prevGoals,
-        { id: Math.floor(Math.rand om() * 10000), text: enteredGoalText },
+        { id: Math.floor(Math.random() * 10000), text: enteredGoalText },
       ]
     })
     setModalIsVisible((prevState) => !prevState)

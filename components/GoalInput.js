@@ -46,11 +46,11 @@ const GoalInput = ({ visible, onModal, onAdd }) => {
           value={enteredGoalText}
         />
         <View style={styles.buttonContainer}>
-          <View style={[styles.button, styles.buttonAddGoal]}>
-            <Button onPress={addGoalHandler} title="Add Goal" />
-          </View>
           <View style={styles.button}>
-            <Button onPress={closeModal} title="Close" />
+            <Button onPress={closeModal} title="Close" color="#f31282" />
+          </View>
+          <View style={[styles.button, styles.buttonAddGoal]}>
+            <Button onPress={addGoalHandler} title="Add Goal" color="#b180f0" />
           </View>
         </View>
       </View>
@@ -64,9 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#cccccc',
-    backgroundColor: 'black',
+    backgroundColor: '#1D053B',
   },
   image: {
     width: '100%',
@@ -76,12 +74,14 @@ const styles = StyleSheet.create({
   },
   textInput: {
     width: '100%',
-    padding: 2,
+    padding: 8,
+    paddingStart: 12,
     borderWidth: 1,
-    borderColor: '#cccccc',
+    borderColor: '#e4d0ff',
+    backgroundColor: '#e4d0ff',
     paddingLeft: 6,
     marginRight: 6,
-    color: 'white',
+    color: '#120438',
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   buttonAddGoal: {
-    marginRight: 6,
+    marginLeft: 8,
   },
   button: {
     width: 100,
