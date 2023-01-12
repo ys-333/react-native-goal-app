@@ -1,4 +1,4 @@
-// import { StatusBar } from 'expo-status-bar'
+import { StatusBar } from 'expo-status-bar'
 import { useState } from 'react'
 import { StyleSheet, Text, View, Pressable } from 'react-native'
 import GoalInput from './components/GoalInput'
@@ -20,7 +20,7 @@ export default function App() {
     setGoals((prevGoals) => {
       return [
         ...prevGoals,
-        { id: Math.floor(Math.random() * 10000), text: enteredGoalText },
+        { id: Math.floor(Math.rand om() * 10000), text: enteredGoalText },
       ]
     })
     setModalIsVisible((prevState) => !prevState)
@@ -50,7 +50,7 @@ export default function App() {
         {/* the flatlist aims to optimise the list of data while rendering, so that we won't turn out rendering all data, and only rendering useful data required */}
         <GoalList goals={goals} onDelete={deleteGoalHandler} />
       </View>
-      {/* <StatusBar style="auto" /> */}
+      <StatusBar style="light" />
     </View>
   )
 }
